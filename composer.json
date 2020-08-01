@@ -1,5 +1,5 @@
 {
-    "name": "digilive/reset-phpStorm-evaluation-period",
+    "name": "digilive/reset-phpstorm-evaluation-period",
     "description": "Reset the 30-day evaluation period of PhpStorm",
     "minimum-stability": "dev",
     "license": "GPL-3.0-or-later",
@@ -10,8 +10,16 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": "^7.2",
         "ext-dom": "*",
-        "coderstephen/windows-registry": "~0.9"
+        "ext-json": "*",
+        "ext-com_dotnet": "*",
+        "digilive/windows-registry": "dev-develop"
+    },
+    "autoload": {
+        "psr-4": {
+            "DigiLive\\PhpStorm\\": "includes/classes"
+        },
+        "files": ["includes/functions.php"]
     }
 }
